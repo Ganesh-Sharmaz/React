@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-function Header() {
+function Header() { 
   return (
     <header className=" sticky top-0 z-50 shadow-lg border-b border-gray-800">
       <nav className=" bg-black border-gray-300 shadow-lg px-4 sm:px-6 py-2.5">

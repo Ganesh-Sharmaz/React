@@ -8,7 +8,7 @@ function Footer() {
           <div className="mb-6 md:mb-0">
             <Link to="/" className="flex items-center">
               <img
-                src="./IMG_20160825_221030.jpg"
+                src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
                 className="mr-3 h-16"
                 alt="Logo"
               />
