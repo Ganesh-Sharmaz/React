@@ -1,16 +1,17 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import Navs from "../NavLinks/Navs.jsx"
 
-function Header() { 
+function Header() {
   return (
     <header className=" sticky top-0 z-50 shadow-lg border-b border-gray-800">
       <nav className=" bg-black border-gray-300 shadow-lg px-4 sm:px-6 py-2.5">
         <div className="  flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to="/" className=" flex items-baseline">
-            <p className=" text-white flex text-4xl  font-bold font-mono ">
+            <p className=" text-white flex text-[45px]  font-bold font-sans ">
               Take
             </p>
-            <p className="text-red-600  text-4xl font-bold font-mono">
+            <p className="text-red-600  text-[50px] font-bold font-sans">
               Travels
             </p>
           </Link>
@@ -28,23 +29,96 @@ function Header() {
               Get Started
             </Link>
           </div>
+          <button
+            type="button"
+            
+            className="relative inline-flex mr-8 p-2 sm:hidden items-baseline justify-center rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span className="absolute -inset-0.5"></span>
+            <span className="sr-only">Open main menu</span>
+
+            <svg
+              className="block h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+
+            <svg
+              className="hidden h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
 
           <div className=" hidden sm:flex justify-between items-center w-full sm:w-auto sm:order-1">
             <ul className=" flex flex-col sm:flex-row mt-4 sm:mt-0 sm:space-x-8">
               <li>
                 <NavLink
-                to="/"
-                className={({isActive}) => ` font-semibold text-white block py-1 duration-300 pl-3  pr-4 ${isActive ? "text-orange-400" : "text-white"} hover:border-gray-400 border-b border-b-slate-900 hover:text-orange-400`}  >Home</NavLink>
+                  to="/"
+                  className={({ isActive }) =>
+                    ` font-semibold text-white block py-1 duration-300 pl-3  pr-4 ${
+                      isActive ? "text-orange-400" : "text-white"
+                    } hover:border-gray-400 border-b border-b-slate-900 hover:text-orange-400`
+                  }
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
                 <NavLink
-                to="/about"
-                className={({isActive}) => `font-semibold text-white block py-1 duration-300 pl-3  pr-4 ${isActive ? "text-orange-400" : "text-white"} hover:border-gray-400 border-b border-b-slate-900 hover:text-orange-400`}>About</NavLink>
+                  to="/about"
+                  className={({ isActive }) =>
+                    `font-semibold text-white block py-1 duration-300 pl-3  pr-4 ${
+                      isActive ? "text-orange-400" : "text-white"
+                    } hover:border-gray-400 border-b border-b-slate-900 hover:text-orange-400`
+                  }
+                >
+                  About
+                </NavLink>
               </li>
               <li>
                 <NavLink
-                to="/contact"
-                className={({isActive}) => `font-semibold text-white block py-1 duration-300 pl-3  pr-4 ${isActive ? "text-orange-400" : "text-white"} hover:border-gray-400 border-b border-b-slate-900 hover:text-orange-400`}>Contact Us</NavLink>
+                  to="/contact"
+                  className={({ isActive }) =>
+                    `font-semibold text-white block py-1 duration-300 pl-3  pr-4 ${
+                      isActive ? "text-orange-400" : "text-white"
+                    } hover:border-gray-400 border-b border-b-slate-900 hover:text-orange-400`
+                  }
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/github"
+                  className={({ isActive }) =>
+                    `font-semibold text-white block py-1 duration-300 pl-3  pr-4 ${
+                      isActive ? "text-orange-400" : "text-white"
+                    } hover:border-gray-400 border-b border-b-slate-900 hover:text-orange-400`
+                  }
+                >
+                  Github
+                </NavLink>
               </li>
             </ul>
           </div>

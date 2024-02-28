@@ -2,11 +2,26 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 function Contact() {
   return (
-    <div className=" bg-slate-950 relative flex items-top justify-center min-h-[700px]  sm:items-center sm:pt-0">
-      <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
-        <div className="mt-8 overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-6 mr-2 bg-gray-100 sm:rounded-lg">
+    <div className="flex flex-wrap justify-center items-center sm:h-[512px] h-max pb-12">
+      
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div className=" pt-5 ">
+        <div className=" overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2">
+            <div className="p-6 mr-2 bg-gray-100 rounded-md sm:rounded-lg">
               <h1 className="text-3xl sm:text-4xl text-gray-800 font-extrabold tracking-tight">
                 Get in touch:
               </h1>
