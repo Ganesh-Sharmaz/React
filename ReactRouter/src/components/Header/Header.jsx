@@ -36,7 +36,7 @@ function Header() {
           <button
             type="button"
             onClick={() => setOpen(!open)}
-            className="relative inline-flex mr-8 p-2 sm:hidden items-baseline justify-center rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            className=" transition-all ease-in duration-1000 relative inline-flex mr-8 p-2 sm:hidden items-baseline justify-center rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
@@ -123,7 +123,8 @@ function Header() {
                   Github
                 </NavLink>
               </li>
-              <li className=" pb-2 transition-all ease-in-out duration-1000">
+              <div className="flex space-x-2 pt-2">
+              <li className="  transition-all ease-in-out duration-1000">
                 <Link
                   to="#"
                   className=" text-white hover:text-gray-800 px-4 py-2 rounded-lg font-medium text-base focus:ring-2 hover:shadow-md focus:ring-gray-300 focus:outline-none hover:bg-slate-300 transition-all"
@@ -131,7 +132,7 @@ function Header() {
                   Log in
                 </Link>
               </li>
-              <li className=" py-2 pb-3 transition-all ease-in-out duration-1000">
+              <li className=" transition-all ease-in-out duration-1000">
                 <Link
                   to="#"
                   className=" bg-orange-600 text-white font-sans font-medium hover:bg-orange-700 px-4  py-2 focus:ring-2 focus:ring-orange-300 rounded-lg shadow-md text-base focus:outline-none"
@@ -139,6 +140,7 @@ function Header() {
                   Get Started
                 </Link>
               </li>
+              </div>
             </ul>
           </div>
 
