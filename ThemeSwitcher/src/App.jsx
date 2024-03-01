@@ -4,7 +4,7 @@ import { ThemeProvider } from "./contexts/Theme.js";
 import Card from "./components/Card.jsx";
 import ThemeBtn from "./components/ThemeBtn.jsx";
 
-function App() {
+function App() {   
 
   const [themeMode, setThemeMode] = useState('light')
 
