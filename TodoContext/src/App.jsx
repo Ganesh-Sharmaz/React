@@ -9,7 +9,7 @@ function App() {
 
   return (
     <TodoProvider>
-
+      const context = useContext(contextValue);
     </TodoProvider>
   )
 }
