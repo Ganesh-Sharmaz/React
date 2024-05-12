@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo, removeTodo } from "../features/todo/todo.Slice.js";
+import { addTodo } from "../features/todo/todo.Slice.js";
 
 function AddTodo() {
     const [input, setInput] = useState("");
+const dispatch = useDispatch()
+
     const addTodoHandler = (e) => {
         e.preventDefault();
-        dispatchEvent(addTodo(input));
+        dispatch(addTodo(input));
         setInput("");
     };
     return (
