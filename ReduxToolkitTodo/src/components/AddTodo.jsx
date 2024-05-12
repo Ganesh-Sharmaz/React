@@ -1,10 +1,27 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addTodo } from "../features/todo/todo.Slice.js";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo, selectTodos } from "../features/todo/todo.Slice.js";
 
 function AddTodo() {
     const [input, setInput] = useState("");
-const dispatch = useDispatch()
+    const dispatch = useDispatch();
+
+    const todos = useSelector(selectTodos);
+
+    useEffect(() => {
+        // Load todos from local storage on component mount
+        const savedTodos = JSON.parse(localStorage.getItem(todos));
+        if (savedTodos) {
+            dispatch({ type: "todos/loadTodos", payload: savedTodos });
+        }
+    });
+
+    useEffect(() => {
+        // Save todos to local storage whenever todos state changes
+        localStorage.setItem("todos", JSON.stringify(todos));
+    });
+
+
 
     const addTodoHandler = (e) => {
         e.preventDefault();
